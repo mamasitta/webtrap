@@ -16,13 +16,13 @@ class AnyRequest(Resource):
         if notawaiting == '1':
             # false request process as error
             logs = LogManager.process_error_log(request)
-            app.app.logger.info(logs)
+            app.app.logger.error(logs)
             return ResponseManager.error_response()
 
         if invalid == '1':
             # process and log as error
             logs = LogManager.process_error_log(request)
-            app.app.logger.info(logs)
+            app.app.logger.error(logs)
             return ResponseManager.success_response()
 
         # other cases of param give success logs and success response
@@ -33,25 +33,25 @@ class AnyRequest(Resource):
     @staticmethod
     def post():
         logs = LogManager.process_error_log(request)
-        app.app.logger.info(logs)
+        app.app.logger.error(logs)
         return ResponseManager.success_response()
 
     @staticmethod
     def put():
         logs = LogManager.process_error_log(request)
-        app.app.logger.info(logs)
+        app.app.logger.error(logs)
         return ResponseManager.success_response()
 
     @staticmethod
     def delete():
         logs = LogManager.process_error_log(request)
-        app.app.logger.info(logs)
+        app.app.logger.error(logs)
         return ResponseManager.success_response()
 
     @staticmethod
     def patch():
         logs = LogManager.process_error_log(request)
-        app.app.logger.info(logs)
+        app.app.logger.error(logs)
         return ResponseManager.success_response()
 
 

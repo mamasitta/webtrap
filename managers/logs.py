@@ -13,13 +13,11 @@ class LogManager:
         method = request.method
         url = request.base_url
         params = request.args
-        time = datetime.datetime.now().timestamp()
-        logs = 'Processing error request:\nmethod: {method}\nurl: {url}\nparameters: {param}\ntime: {time}'.format(
+        logs_format = 'Processing error request:  {method} {url} parameters: {param}'.format(
             method=method,
             url=url,
-            param=params,
-            time=time)
-        return logs
+            param=params)
+        return logs_format
 
     @staticmethod
     def process_success_log(request) -> str:
@@ -31,10 +29,8 @@ class LogManager:
         method = request.method
         url = request.base_url
         params = request.args
-        time = datetime.datetime.now().timestamp()
-        logs = 'Processing success request:\nmethod: {method}\nurl: {url}\nparameters: {param}\ntime: {time}'.format(
+        logs_format = 'Processing success request:  {method} {url} parameters: {param}'.format(
             method=method,
             url=url,
-            param=params,
-            time=time)
-        return logs
+            param=params)
+        return logs_format

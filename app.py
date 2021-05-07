@@ -12,7 +12,9 @@ app = Flask(__name__)
 CORS(app)
 
 # logs will be saved in file webtrap.log
-logging.basicConfig(filename='webtrap.log', level=logging.DEBUG)
+logging.basicConfig(filename='webtrap.log',
+                    level=logging.DEBUG,
+                    format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 # APIs
 api = Api(app)
