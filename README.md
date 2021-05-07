@@ -27,28 +27,12 @@ any request on url 'http://127.0.0.1:8001/api' except GET (DELETE, POST, PUT, PA
 
 ERROR LOG:
 
-INFO:app:Processing error request:
-
-method: GET
-
-url: http://127.0.0.1:8001/api
-
-parameters: ImmutableMultiDict([('invalid', '1')])
-
-time: 1620377809.967132
+2021-05-07 14:27:30,287 ERROR app MainThread : Processing error request:  GET http://localhost/api parameters: ImmutableMultiDict([('invalid', '1')])
 
 
 SUCCESS LOG:
 
-INFO:app:Processing success request:
-
-method: GET
-
-url: http://127.0.0.1:8001/api
-
-parameters: ImmutableMultiDict([('invalid', '2')])
-
-time: 1620377809.968082
+2021-05-07 14:27:30,290 INFO app MainThread : Processing success request:  GET http://localhost/api parameters: ImmutableMultiDict([('invalid', '2')])
 
 ### To run tests use the following command
 
